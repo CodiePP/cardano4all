@@ -5,16 +5,21 @@ Building the Cardano node and tools from [input-output-hk/cardano-node](https://
 
 > this will only work if you have the required system dependencies installed. (see below)
 
-1.) checkout the dependencies
-  `$` `git submodule update --init --remote`
+### 1 checkout the dependencies
 
-2.) build with either:
-  a) `cabal`:   `$` `cabal build all`
-  b) `stack`:   `$` `stack build`
+_`$`_ `git submodule update --init --remote`
+
+### 2 build
+
+2 a) `cabal`:   _`$`_ `cabal build all`
   
-3.) run test suite
-  a) `cabal`:   `$` `cabal test all`
-  b) `stack`:   `$` `stack test`
+2 b) `stack`:   _`$`_ `stack build`
+  
+### 3 run test suite
+
+3 a) `cabal`:   _`$`_ `cabal test all`
+  
+3 b) `stack`:   _`$`_ `stack test`
 
 ## System setup *Linux*
 > <tbd>
