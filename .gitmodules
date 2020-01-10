@@ -1,56 +1,56 @@
-[submodule "cardano-base"]
-	path = ext/cardano-base
-	url = git@github.com:input-output-hk/cardano-base
-	branch = master
-[submodule "cardano-byron-proxy"]
-	path = ext/cardano-byron-proxy
-	url = git@github.com:input-output-hk/cardano-byron-proxy
-	branch = master
-[submodule "cardano-crypto"]
-	path = ext/cardano-crypto
-	url = git@github.com:input-output-hk/cardano-crypto
-	branch = master
-[submodule "cardano-ledger-specs"]
-	path = ext/cardano-ledger-specs
-	url = git@github.com:input-output-hk/cardano-ledger-specs
-	branch = master
-[submodule "cardano-wallet"]
-	path = ext/cardano-wallet
-	url = git@github.com:input-output-hk/cardano-wallet
-	branch = master
-[submodule "ouroboros-network"]
-	path = ext/ouroboros-network
-	url = git@github.com:input-output-hk/ouroboros-network
-	branch = master
-[submodule "cardano-explorer"]
-	path = ext/cardano-explorer
-	url = git@github.com:input-output-hk/cardano-explorer
-	branch = master
-[submodule "cardano-node"]
-	path = ext/cardano-node
-	url = git@github.com:input-output-hk/cardano-node
-	branch = master
-[submodule "cardano-shell"]
-	path = ext/cardano-shell
-	url = git@github.com:input-output-hk/cardano-shell
-	branch = master
-[submodule "goblins"]
-	path = ext/goblins
-	url = git@github.com:input-output-hk/goblins
-	branch = master
-[submodule "cardano-ledger"]
-	path = ext/cardano-ledger
-	url = git@github.com:input-output-hk/cardano-ledger
-	branch = master
-[submodule "cardano-prelude"]
-	path = ext/cardano-prelude
-	url = git@github.com:input-output-hk/cardano-prelude
-	branch = master
-[submodule "cardano-sl-x509"]
-	path = ext/cardano-sl-x509
-	url = git@github.com:input-output-hk/cardano-sl-x509
-	branch = master
-[submodule "iohk-monitoring-framework"]
-	path = ext/iohk-monitoring-framework
+[submodule "iohk-monitoring-framework.git"]
+	path = ext/iohk-monitoring-framework.git
 	url = git@github.com:input-output-hk/iohk-monitoring-framework
+	branch = master
+[submodule "cardano-base.git"]
+	path = ext/cardano-base.git
+	url = git@github.com:input-output-hk/cardano-base.git
+	branch = master
+[submodule "cardano-byron-proxy.git"]
+	path = ext/cardano-byron-proxy.git
+	url = git@github.com:input-output-hk/cardano-byron-proxy.git
+	branch = master
+[submodule "cardano-crypto.git"]
+	path = ext/cardano-crypto.git
+	url = git@github.com:input-output-hk/cardano-crypto.git
+	branch = master
+[submodule "cardano-ledger-specs.git"]
+	path = ext/cardano-ledger-specs.git
+	url = git@github.com:input-output-hk/cardano-ledger-specs.git
+	branch = master
+[submodule "cardano-wallet.git"]
+	path = ext/cardano-wallet.git
+	url = git@github.com:input-output-hk/cardano-wallet.git
+	branch = master
+[submodule "ouroboros-network.git"]
+	path = ext/ouroboros-network.git
+	url = git@github.com:input-output-hk/ouroboros-network.git
+	branch = master
+[submodule "cardano-explorer.git"]
+	path = ext/cardano-explorer.git
+	url = git@github.com:input-output-hk/cardano-explorer.git
+	branch = master
+[submodule "cardano-node.git"]
+	path = ext/cardano-node.git
+	url = git@github.com:input-output-hk/cardano-node.git
+	branch = master
+[submodule "cardano-shell.git"]
+	path = ext/cardano-shell.git
+	url = git@github.com:input-output-hk/cardano-shell.git
+	branch = master
+[submodule "goblins.git"]
+	path = ext/goblins.git
+	url = git@github.com:input-output-hk/goblins.git
+	branch = master
+[submodule "cardano-ledger.git"]
+	path = ext/cardano-ledger.git
+	url = git@github.com:input-output-hk/cardano-ledger.git
+	branch = master
+[submodule "cardano-prelude.git"]
+	path = ext/cardano-prelude.git
+	url = git@github.com:input-output-hk/cardano-prelude.git
+	branch = master
+[submodule "cardano-sl-x509.git"]
+	path = ext/cardano-sl-x509.git
+	url = git@github.com:input-output-hk/cardano-sl-x509.git
 	branch = master
