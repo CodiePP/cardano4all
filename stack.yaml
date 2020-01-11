@@ -1,0 +1,99 @@
+resolver: https://raw.githubusercontent.com/input-output-hk/cardano-prelude/00487726c4bc21b4744e59d913334ebfeac7d68e/snapshot.yaml
+
+packages:
+  - ext/cardano-node.git/cardano-node
+
+
+extra-deps:
+  - ext/cardano-node.git/cardano-config
+  # deps by cardano-node
+  - bimap-0.4.0
+  - binary-0.8.7.0
+  - brick-0.47
+  - config-ini-0.2.4.0
+  - containers-0.5.11.0
+  - data-clist-0.1.2.2
+  - generic-monoid-0.1.0.0
+  - gray-code-0.3.1
+  - moo-1.2
+  - statistics-linreg-0.3
+  - tasty-hedgehog-1.0.0.1
+  - text-zipper-0.10.1
+  - transformers-except-0.1.1
+  - Unique-0.4.7.6
+  - word-wrap-0.4.1
+
+  - ext/ouroboros-network.git/typed-protocols
+  - ext/ouroboros-network.git/typed-protocols-cbor
+  - ext/ouroboros-network.git/ouroboros-network-testing
+  - ext/ouroboros-network.git/network-mux
+  - ext/ouroboros-network.git/ouroboros-network
+  - ext/ouroboros-network.git/ouroboros-consensus
+  - ext/ouroboros-network.git/io-sim
+
+  - ext/ouroboros-network.git/io-sim-classes
+  - ext/cardano-ledger.git/cardano-ledger
+  - ext/cardano-ledger.git/cardano-ledger/test
+
+  - ext/cardano-ledger-specs.git/byron/semantics/executable-spec
+  - ext/cardano-ledger-specs.git/byron/ledger/executable-spec
+  - ext/cardano-ledger-specs.git/byron/chain/executable-spec
+  - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/dependencies/non-integer
+  - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/executable-spec
+  - ext/goblins.git/
+
+  - ext/cardano-ledger.git/crypto
+  - ext/cardano-ledger.git/crypto/test
+
+  - ext/cardano-prelude.git
+  - ext/cardano-prelude.git/test
+
+  - ext/iohk-monitoring-framework.git/contra-tracer
+  - ext/iohk-monitoring-framework.git/tracer-transformers
+  - ext/iohk-monitoring-framework.git/iohk-monitoring
+  - ext/iohk-monitoring-framework.git/plugins/backend-monitoring
+  - ext/iohk-monitoring-framework.git/plugins/backend-aggregation
+  - ext/iohk-monitoring-framework.git/plugins/backend-ekg
+  - ext/iohk-monitoring-framework.git/plugins/backend-editor
+  - ext/iohk-monitoring-framework.git/plugins/scribe-systemd
+  # deps by iohk-monitoring-framework
+  - time-units-1.0.0
+  - prometheus-2.1.2
+  - libsystemd-journal-1.4.4
+  - katip-0.8.3.0
+  - git: https://github.com/CodiePP/ekg-prometheus-adapter
+    commit: 1a258b6df7d9807d4c4ff3e99722223d31a2c320
+
+  - ext/cardano-base.git/binary
+  - ext/cardano-base.git/binary/test
+  - ext/cardano-base.git/cardano-crypto-class
+  - ext/cardano-base.git/slotting
+
+  - ext/cardano-crypto.git
+  - ext/cardano-sl-x509.git
+
+  - ext/cardano-shell.git/cardano-launcher
+  - ext/cardano-shell.git/cardano-shell
+
+  - ext/cardano-explorer.git/cardano-explorer-db
+  - ext/cardano-explorer.git/cardano-explorer-node
+  - ext/cardano-explorer.git/cardano-explorer-webapi
+  - ext/cardano-explorer.git/cardano-explorer-db/test
+  - ext/cardano-explorer.git/cardano-tx-submit
+
+
+flags:
+  cardano-ledger:
+    development: true
+
+  cardano-crypto-class:
+    development: true
+
+nix:
+  pure: true
+  packages: [ zlib.dev, zlib.out
+            , openssl.dev, openssl.out
+            , haskell.compiler.ghc865
+            , pkg-config
+            , systemd.dev
+            ]
