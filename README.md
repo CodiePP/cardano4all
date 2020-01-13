@@ -13,7 +13,7 @@ _`$`_ `git submodule update --init --remote`
 
 2 a) `cabal`:   _`$`_ `cabal build all`
   
-2 b) `stack`:   _`$`_ `stack build`
+2 b) `stack`:   _`$`_ `stack build cardano-node:exe:cardano-node --copy-bins`
   
 ### 3 run test suite
 
@@ -29,4 +29,4 @@ _`$`_ `git submodule update --init --remote`
   
 ## System setup *Windows*
 > <tbd>
-  
+
