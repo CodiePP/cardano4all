@@ -17,13 +17,19 @@ extra-deps:
   - data-clist-0.1.2.2
   - generic-monoid-0.1.0.0
   - gray-code-0.3.1
+  - io-streams-1.5.1.0
+  - io-streams-haproxy-1.0.1.0
   - moo-1.2
+  - network-3.1.0.0
+  - snap-core-1.0.4.0
+  - snap-server-1.1.1.1
   - statistics-linreg-0.3
   - tasty-hedgehog-1.0.0.1
   - text-zipper-0.10.1
   - transformers-except-0.1.1
   - Unique-0.4.7.6
   - word-wrap-0.4.1
+  - websockets-0.12.6.1
 
   - ext/ouroboros-network.git/typed-protocols
   - ext/ouroboros-network.git/typed-protocols-cbor
