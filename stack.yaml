@@ -32,26 +32,27 @@ extra-deps:
   - websockets-0.12.6.1
 
   - ext/ouroboros-network.git/typed-protocols
-  - ext/ouroboros-network.git/typed-protocols-cbor
-  - ext/ouroboros-network.git/ouroboros-network-testing
+  - ext/ouroboros-network.git/typed-protocols-examples
+  - ext/ouroboros-network.git/ouroboros-network-framework
   - ext/ouroboros-network.git/network-mux
   - ext/ouroboros-network.git/ouroboros-network
   - ext/ouroboros-network.git/ouroboros-consensus
+  - ext/ouroboros-network.git/ouroboros-consensus-cardano
+  - ext/ouroboros-network.git/ouroboros-consensus-byron
+  - ext/ouroboros-network.git/ouroboros-consensus/ouroboros-consensus-mock
   - ext/ouroboros-network.git/io-sim
-
   - ext/ouroboros-network.git/io-sim-classes
+
   - ext/cardano-ledger.git/cardano-ledger
   - ext/cardano-ledger.git/cardano-ledger/test
+  - ext/cardano-ledger.git/crypto
+  - ext/cardano-ledger.git/crypto/test
 
   - ext/cardano-ledger-specs.git/byron/semantics/executable-spec
   - ext/cardano-ledger-specs.git/byron/ledger/executable-spec
   - ext/cardano-ledger-specs.git/byron/chain/executable-spec
-  - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/dependencies/non-integer
-  - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/executable-spec
-  - ext/goblins.git/
 
-  - ext/cardano-ledger.git/crypto
-  - ext/cardano-ledger.git/crypto/test
+  - ext/goblins.git/
 
   - ext/cardano-prelude.git
   - ext/cardano-prelude.git/test
