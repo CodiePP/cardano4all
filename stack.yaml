@@ -4,6 +4,7 @@ resolver: https://raw.githubusercontent.com/input-output-hk/cardano-prelude/0048
 
 packages:
   - ext/cardano-node.git/cardano-node
+  - ext/cardano-db-sync.git/cardano-db-sync
 
 
 extra-deps:
@@ -15,17 +16,23 @@ extra-deps:
   - config-ini-0.2.4.0
   - containers-0.5.11.0
   - data-clist-0.1.2.2
+  - esqueleto-3.2.2
   - generic-monoid-0.1.0.0
   - gray-code-0.3.1
   - io-streams-1.5.1.0
   - io-streams-haproxy-1.0.1.0
   - moo-1.2
   - network-3.1.0.0
+  - persistent-2.10.5.1
+  - persistent-postgresql-2.10.1.2
+  - persistent-template-2.8.2.3
   - snap-core-1.0.4.0
   - snap-server-1.1.1.1
   - statistics-linreg-0.3
   - tasty-hedgehog-1.0.0.1
   - text-zipper-0.10.1
+  - th-lift-0.8.1
+  - th-lift-instances-0.1.14
   - transformers-except-0.1.1
   - Unique-0.4.7.6
   - word-wrap-0.4.1
@@ -82,11 +89,7 @@ extra-deps:
   - ext/cardano-shell.git/cardano-launcher
   - ext/cardano-shell.git/cardano-shell
 
-  - ext/cardano-explorer.git/cardano-explorer-db
-  - ext/cardano-explorer.git/cardano-explorer-node
-  - ext/cardano-explorer.git/cardano-explorer-webapi
-  - ext/cardano-explorer.git/cardano-explorer-db/test
-  - ext/cardano-explorer.git/cardano-tx-submit
+  - ext/cardano-db-sync.git/cardano-db
 
 
 flags:
@@ -103,4 +106,5 @@ nix:
             , haskell.compiler.ghc865
             , pkg-config
             , systemd.dev
+            , postgresql
             ]
