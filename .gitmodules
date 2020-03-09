@@ -26,10 +26,6 @@
 	path = ext/ouroboros-network.git
 	url = git@github.com:input-output-hk/ouroboros-network.git
 	branch = master
-[submodule "cardano-explorer.git"]
-	path = ext/cardano-explorer.git
-	url = git@github.com:input-output-hk/cardano-explorer.git
-	branch = master
 [submodule "cardano-node.git"]
 	path = ext/cardano-node.git
 	url = git@github.com:input-output-hk/cardano-node.git
@@ -53,4 +49,8 @@
 [submodule "cardano-sl-x509.git"]
 	path = ext/cardano-sl-x509.git
 	url = git@github.com:input-output-hk/cardano-sl-x509.git
+	branch = master
+[submodule "ext/cardano-db-sync.git"]
+	path = ext/cardano-db-sync.git
+	url = git@github.com:input-output-hk/cardano-db-sync.git
 	branch = master
