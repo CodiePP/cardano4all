@@ -49,6 +49,7 @@ extra-deps:
   - ext/ouroboros-network.git/ouroboros-consensus/ouroboros-consensus-mock
   - ext/ouroboros-network.git/io-sim
   - ext/ouroboros-network.git/io-sim-classes
+  - ext/ouroboros-network.git/Win32-network
 
   - ext/cardano-ledger.git/cardano-ledger
   - ext/cardano-ledger.git/cardano-ledger/test
