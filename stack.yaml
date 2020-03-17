@@ -4,6 +4,7 @@ resolver: https://raw.githubusercontent.com/input-output-hk/cardano-prelude/0048
 
 packages:
   - ext/cardano-node.git/cardano-node
+  - ext/cardano-node.git/cardano-tx-generator
   - ext/cardano-db-sync.git/cardano-db-sync
 
 
@@ -68,10 +69,9 @@ extra-deps:
   - ext/iohk-monitoring-framework.git/contra-tracer
   - ext/iohk-monitoring-framework.git/tracer-transformers
   - ext/iohk-monitoring-framework.git/iohk-monitoring
-  - ext/iohk-monitoring-framework.git/plugins/backend-monitoring
   - ext/iohk-monitoring-framework.git/plugins/backend-aggregation
   - ext/iohk-monitoring-framework.git/plugins/backend-ekg
-  - ext/iohk-monitoring-framework.git/plugins/backend-editor
+  - ext/iohk-monitoring-framework.git/plugins/backend-monitoring
   - ext/iohk-monitoring-framework.git/plugins/scribe-systemd
   # deps by iohk-monitoring-framework
   - time-units-1.0.0
