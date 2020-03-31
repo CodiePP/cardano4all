@@ -4,7 +4,7 @@ resolver: https://raw.githubusercontent.com/input-output-hk/cardano-prelude/0048
 
 packages:
   - ext/cardano-node.git/cardano-node
-  - ext/cardano-node.git/cardano-tx-generator
+  - ext/cardano-benchmarking.git/cardano-tx-generator
   - ext/cardano-db-sync.git/cardano-db-sync
 
 
@@ -48,6 +48,7 @@ extra-deps:
   - ext/ouroboros-network.git/ouroboros-consensus-cardano
   - ext/ouroboros-network.git/ouroboros-consensus-byron
   - ext/ouroboros-network.git/ouroboros-consensus/ouroboros-consensus-mock
+  - ext/ouroboros-network.git/ouroboros-consensus-shelley
   - ext/ouroboros-network.git/io-sim
   - ext/ouroboros-network.git/io-sim-classes
   - ext/ouroboros-network.git/Win32-network
@@ -60,6 +61,9 @@ extra-deps:
   - ext/cardano-ledger-specs.git/byron/semantics/executable-spec
   - ext/cardano-ledger-specs.git/byron/ledger/executable-spec
   - ext/cardano-ledger-specs.git/byron/chain/executable-spec
+  - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/dependencies/non-integer
+  - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/executable-spec
+  - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/executable-spec/test
 
   - ext/goblins.git/
 

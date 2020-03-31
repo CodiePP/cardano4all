@@ -54,3 +54,6 @@
 	path = ext/cardano-db-sync.git
 	url = git@github.com:input-output-hk/cardano-db-sync.git
 	branch = master
+[submodule "ext/cardano-benchmarking.git"]
+	path = ext/cardano-benchmarking.git
+	url = git@github.com:input-output-hk/cardano-benchmarking.git
