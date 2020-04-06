@@ -76,6 +76,8 @@ extra-deps:
   - ext/iohk-monitoring-framework.git/plugins/backend-aggregation
   - ext/iohk-monitoring-framework.git/plugins/backend-ekg
   - ext/iohk-monitoring-framework.git/plugins/backend-monitoring
+  - ext/iohk-monitoring-framework.git/plugins/backend-trace-acceptor
+  - ext/iohk-monitoring-framework.git/plugins/backend-trace-forwarder
   - ext/iohk-monitoring-framework.git/plugins/scribe-systemd
   # deps by iohk-monitoring-framework
   - time-units-1.0.0
