@@ -1,17 +1,22 @@
 local-bin-path: bin/
 
-resolver: https://raw.githubusercontent.com/input-output-hk/cardano-prelude/00487726c4bc21b4744e59d913334ebfeac7d68e/snapshot.yaml
+resolver: https://raw.githubusercontent.com/input-output-hk/cardano-prelude/bd7eb69d27bfaee46d435bc1d2720520b1446426/snapshot.yaml
 
 packages:
   - ext/cardano-node.git/cardano-node
-  - ext/cardano-node.git/cardano-config
+  - ext/cardano-node.git/cardano-cli
   - ext/cardano-benchmarking.git/cardano-tx-generator
   - ext/cardano-benchmarking.git/cardano-rt-view
-    #  - ext/cardano-db-sync.git/cardano-db-sync
-
+  - ext/cardano-benchmarking.git/bm-timeline
+    #- ext/cardano-db-sync.git/cardano-db-sync
 
 extra-deps:
+  - ext/cardano-node.git/cardano-api
+  - ext/cardano-node.git/cardano-config
+
   # deps by cardano-node
+  - git: https://github.com/erebe/systemd
+    commit: dba4b563dac99ff52328db916d99d928bc4a80fb
   - bimap-0.4.0
   - binary-0.8.7.0
   - brick-0.47
@@ -25,11 +30,11 @@ extra-deps:
   - io-streams-1.5.1.0
   - io-streams-haproxy-1.0.1.0
   - moo-1.2
-  - network-3.1.0.0
+  - network-3.1.1.1
   - persistent-2.10.5.1
   - persistent-postgresql-2.10.1.2
   - persistent-template-2.8.2.3
-  - process-1.6.8.2
+  - process-1.6.9.0
   - quiet-0.2
   - snap-core-1.0.4.0
   - snap-server-1.1.1.1
@@ -41,6 +46,7 @@ extra-deps:
   - time-1.8
   - transformers-except-0.1.1
   - Unique-0.4.7.6
+  - unix-2.7.2.2
   - word-wrap-0.4.1
   - websockets-0.12.6.1
   - Win32-2.8.5.0
@@ -81,6 +87,7 @@ extra-deps:
   - ext/iohk-monitoring-framework.git/tracer-transformers
   - ext/iohk-monitoring-framework.git/iohk-monitoring
   - ext/iohk-monitoring-framework.git/plugins/backend-aggregation
+  - ext/iohk-monitoring-framework.git/plugins/backend-editor
   - ext/iohk-monitoring-framework.git/plugins/backend-ekg
   - ext/iohk-monitoring-framework.git/plugins/backend-monitoring
   - ext/iohk-monitoring-framework.git/plugins/backend-trace-acceptor
@@ -100,10 +107,9 @@ extra-deps:
   - ext/cardano-crypto.git
   - ext/cardano-sl-x509.git
 
-  - ext/cardano-shell.git/cardano-launcher
   - ext/cardano-shell.git/cardano-shell
 
-  - ext/cardano-db-sync.git/cardano-db
+    #- ext/cardano-db-sync.git/cardano-db
 
     # Includes a windows build fix (https://github.com/snoyberg/http-client/pull/430)
   - git: https://github.com/snoyberg/http-client.git
