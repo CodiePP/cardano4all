@@ -38,10 +38,6 @@
 	path = ext/goblins.git
 	url = git@github.com:input-output-hk/goblins.git
 	branch = master
-[submodule "cardano-ledger.git"]
-	path = ext/cardano-ledger.git
-	url = git@github.com:input-output-hk/cardano-ledger.git
-	branch = master
 [submodule "cardano-prelude.git"]
 	path = ext/cardano-prelude.git
 	url = git@github.com:input-output-hk/cardano-prelude.git

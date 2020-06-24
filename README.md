@@ -22,7 +22,9 @@ _`$`_ `git submodule update --init --remote`
 3 b) `stack`:   _`$`_ `stack test`
 
 ## System setup *Linux*
-> <tbd>
+
+on a Linux/Debian system:
+> `sudo apt install libsystemd-dev libsodium-dev libncurses-dev pkg-config`
   
 ## System setup *Mac OSX*
 > <tbd>
