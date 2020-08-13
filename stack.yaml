@@ -21,7 +21,7 @@ extra-deps:
   - assoc-1.0.1
   - base58-bytestring-0.1.0
   - base64-0.4.2
-  - bech32-1.0.2
+  - bech32-1.1.0
   - bifunctors-5.5.7
   - bimap-0.4.0
   - binary-0.8.7.0
@@ -77,14 +77,13 @@ extra-deps:
 
   - ext/ouroboros-network.git/typed-protocols
   - ext/ouroboros-network.git/typed-protocols-examples
-  - ext/ouroboros-network.git/ouroboros-network-framework
   - ext/ouroboros-network.git/network-mux
   - ext/ouroboros-network.git/ouroboros-network
+  - ext/ouroboros-network.git/ouroboros-network-framework
+  - ext/ouroboros-network.git/ouroboros-network-testing
   - ext/ouroboros-network.git/ouroboros-consensus
-  - ext/ouroboros-network.git/ouroboros-consensus/ouroboros-consensus-test-infra
-  - ext/ouroboros-network.git/ouroboros-consensus-cardano
   - ext/ouroboros-network.git/ouroboros-consensus-byron
-  - ext/ouroboros-network.git/ouroboros-consensus/ouroboros-consensus-mock
+  - ext/ouroboros-network.git/ouroboros-consensus-cardano
   - ext/ouroboros-network.git/ouroboros-consensus-shelley
   - ext/ouroboros-network.git/io-sim
   - ext/ouroboros-network.git/io-sim-classes
@@ -92,6 +91,7 @@ extra-deps:
   - ext/ouroboros-network.git/Win32-network
 
   - ext/cardano-ledger-specs.git/semantics/executable-spec
+  - ext/cardano-ledger-specs.git/semantics/small-steps-test
   - ext/cardano-ledger-specs.git/byron/ledger/executable-spec
   - ext/cardano-ledger-specs.git/byron/ledger/impl
   - ext/cardano-ledger-specs.git/byron/ledger/impl/test
@@ -100,7 +100,7 @@ extra-deps:
   - ext/cardano-ledger-specs.git/byron/chain/executable-spec
   - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/dependencies/non-integer
   - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/executable-spec
-  - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/executable-spec/test
+  - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/shelley-spec-ledger-test
 
   - ext/goblins.git/
 
@@ -130,8 +130,6 @@ extra-deps:
   - ext/cardano-crypto.git
   - ext/cardano-sl-x509.git
 
-  - ext/cardano-shell.git/cardano-shell
-
   #- ext/cardano-db-sync.git/cardano-db
   #- http-client-0.5.14
 
@@ -159,5 +157,5 @@ nix:
             , haskell.compiler.ghc865
             , pkg-config
             , systemd.dev
-            , postgresql
+            #, postgresql
             ]
