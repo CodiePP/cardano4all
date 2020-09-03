@@ -1,6 +1,6 @@
 local-bin-path: bin/
 
-resolver: https://raw.githubusercontent.com/input-output-hk/cardano-prelude/316c854d1d3089f480708ad5cd5ecf8a74423ddd/snapshot.yaml
+resolver: https://raw.githubusercontent.com/input-output-hk/cardano-prelude/0c5b0a6619fadf22f4d62a12154e181a6d035c1c/snapshot.yaml
 
 packages:
   - ext/cardano-node.git/cardano-node
@@ -13,6 +13,9 @@ packages:
 extra-deps:
   - ext/cardano-node.git/cardano-api
   - ext/cardano-node.git/cardano-config
+
+  - ext/cborg.git/cborg
+  - ext/cborg.git/serialise
 
   - QuickCheck-2.12.6.1
   - Unique-0.4.7.6
@@ -49,6 +52,8 @@ extra-deps:
   - persistent-2.10.5.1
   - persistent-postgresql-2.10.1.2
   - persistent-template-2.8.2.3
+  - pipes-safe-2.3.2
+  - primitive-0.7.1.0
   - process-1.6.8.2
   - quickcheck-instances-0.3.19
   - quiet-0.2
@@ -70,6 +75,7 @@ extra-deps:
   - time-compat-1.9.3
   - time-units-1.0.0
   - transformers-except-0.1.1
+  - typerep-map-0.3.3.0
   - unix-2.7.2.2
   - websockets-0.12.6.1
   - word-wrap-0.4.1
@@ -134,10 +140,11 @@ extra-deps:
   #- http-client-0.5.14
 
     # Includes updated pretty printing function
-  - git: https://github.com/well-typed/cborg.git
-    commit: 42a83192749774268337258f4f94c97584b80ca6
-    subdirs:
-        - cborg
+  #- git: https://github.com/well-typed/cborg.git
+  #  commit: 
+  #  subdirs:
+  #      - cborg
+  #      - serialise
 
     # Includes a windows build fix (https://github.com/snoyberg/http-client/pull/430)
   #- git: https://github.com/snoyberg/http-client.git

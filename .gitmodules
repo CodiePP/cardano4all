@@ -46,3 +46,6 @@
 	path = ext/cardano-benchmarking.git
 	url = git@github.com:input-output-hk/cardano-benchmarking.git
 	branch = master
+[submodule "ext/cborg.git"]
+	path = ext/cborg.git
+	url = git@github.com:well-typed/cborg.git
