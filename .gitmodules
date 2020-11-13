@@ -26,10 +26,6 @@
 	path = ext/cardano-node.git
 	url = git@github.com:input-output-hk/cardano-node.git
 	branch = master
-[submodule "goblins.git"]
-	path = ext/goblins.git
-	url = git@github.com:input-output-hk/goblins.git
-	branch = master
 [submodule "cardano-prelude.git"]
 	path = ext/cardano-prelude.git
 	url = git@github.com:input-output-hk/cardano-prelude.git
@@ -46,6 +42,3 @@
 	path = ext/cardano-benchmarking.git
 	url = git@github.com:input-output-hk/cardano-benchmarking.git
 	branch = master
-[submodule "ext/cborg.git"]
-	path = ext/cborg.git
-	url = git@github.com:well-typed/cborg.git
