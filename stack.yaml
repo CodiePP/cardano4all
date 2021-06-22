@@ -1,84 +1,30 @@
 local-bin-path: bin/
 
-resolver: https://raw.githubusercontent.com/input-output-hk/cardano-prelude/0c5b0a6619fadf22f4d62a12154e181a6d035c1c/snapshot.yaml
+resolver: lts-17.13
 
 packages:
   - ext/cardano-node.git/cardano-node
   - ext/cardano-node.git/cardano-cli
-  - ext/cardano-benchmarking.git/cardano-tx-generator
-  - ext/cardano-benchmarking.git/cardano-rt-view
-  - ext/cardano-benchmarking.git/bm-timeline
+  #- ext/cardano-benchmarking.git/cardano-tx-generator
+  #- ext/cardano-benchmarking.git/cardano-rt-view
+  #- ext/cardano-benchmarking.git/bm-timeline
   #- ext/cardano-db-sync.git/cardano-db-sync
 
 extra-deps:
   - ext/cardano-node.git/cardano-api
   - ext/cardano-node.git/cardano-config
 
-  - ext/cborg.git/cborg
-  - ext/cborg.git/serialise
-
-  - QuickCheck-2.12.6.1
-  - Unique-0.4.7.6
-  - Win32-2.8.5.0
-  - aeson-1.4.7.1
-  - assoc-1.0.1
-  - base58-bytestring-0.1.0
-  - base64-0.4.2
-  - bech32-1.1.0
-  - bifunctors-5.5.7
-  - bimap-0.4.0
-  - binary-0.8.7.0
-  - brick-0.47
+  - async-timer-0.2.0.0
+  - base16-bytestring-1.0.1.0
   - canonical-json-0.6.0.0
-  - clock-0.8
-  - config-ini-0.2.4.0
-  - containers-0.5.11.0
-  - data-clist-0.1.2.2
-  - directory-1.3.6.1
-  - esqueleto-3.2.2
-  - generic-monoid-0.1.0.0
-  - generics-sop-0.5.1.0
-  - ghc-byteorder-4.11.0.0.10
-  - gray-code-0.3.1
-  - hedgehog-1.0.2
-  - hspec-2.7.0
-  - hspec-core-2.7.0
-  - hspec-discover-2.7.0
-  - io-streams-1.5.1.0
-  - io-streams-haproxy-1.0.1.0
-  - micro-recursion-schemes-5.0.2.2
-  - moo-1.2
-  - network-3.1.1.1
-  - persistent-2.10.5.1
-  - persistent-postgresql-2.10.1.2
-  - persistent-template-2.8.2.3
-  - pipes-safe-2.3.2
-  - primitive-0.7.1.0
-  - process-1.6.8.2
-  - quickcheck-instances-0.3.19
-  - quiet-0.2
-  - snap-core-1.0.4.1
-  - snap-server-1.1.1.1
-  - sop-core-0.5.0.1
+  - dns-3.0.4
+  - network-3.1.2.1
+  - nothunks-0.1.2
+  - partial-order-0.2.0.0
   - statistics-linreg-0.3
-  - streaming-binary-0.3.0.1
-  - git: https://github.com/erebe/systemd
-    commit: dba4b563dac99ff52328db916d99d928bc4a80fb
-  - tasty-hedgehog-1.0.0.2
-  - text-1.2.4.0
-  - text-zipper-0.10.1
-  - th-abstraction-0.3.2.0
-  - th-lift-0.8.1
-  - th-lift-instances-0.1.14
-  - these-1.1
-  - time-1.8.0.4
-  - time-compat-1.9.3
-  - time-units-1.0.0
+  - streaming-binary-0.2.2.0
   - transformers-except-0.1.1
-  - typerep-map-0.3.3.0
-  - unix-2.7.2.2
-  - websockets-0.12.6.1
-  - word-wrap-0.4.1
+  - unliftio-core-0.1.2.0
 
 
   - ext/ouroboros-network.git/typed-protocols
@@ -93,9 +39,8 @@ extra-deps:
   - ext/ouroboros-network.git/ouroboros-consensus-shelley
   - ext/ouroboros-network.git/io-sim
   - ext/ouroboros-network.git/io-sim-classes
-  - ext/ouroboros-network.git/cardano-client
-  - ext/ouroboros-network.git/Win32-network
 
+  - ext/cardano-ledger-specs.git/cardano-ledger-core
   - ext/cardano-ledger-specs.git/semantics/executable-spec
   - ext/cardano-ledger-specs.git/semantics/small-steps-test
   - ext/cardano-ledger-specs.git/byron/ledger/executable-spec
@@ -107,11 +52,11 @@ extra-deps:
   - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/dependencies/non-integer
   - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/executable-spec
   - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/shelley-spec-ledger-test
+  - ext/cardano-ledger-specs.git/shelley-ma/impl
+  - ext/cardano-ledger-specs.git/shelley-ma/shelley-ma-test
 
-  - ext/goblins.git/
-
-  - ext/cardano-prelude.git
-  - ext/cardano-prelude.git/test
+  - ext/cardano-prelude.git/cardano-prelude
+  - ext/cardano-prelude.git/cardano-prelude-test
 
   - ext/iohk-monitoring-framework.git/contra-tracer
   - ext/iohk-monitoring-framework.git/tracer-transformers
@@ -119,38 +64,27 @@ extra-deps:
   - ext/iohk-monitoring-framework.git/plugins/backend-aggregation
   - ext/iohk-monitoring-framework.git/plugins/backend-editor
   - ext/iohk-monitoring-framework.git/plugins/backend-ekg
+  - ext/iohk-monitoring-framework.git/plugins/backend-kafka
   - ext/iohk-monitoring-framework.git/plugins/backend-monitoring
   - ext/iohk-monitoring-framework.git/plugins/backend-trace-acceptor
   - ext/iohk-monitoring-framework.git/plugins/backend-trace-forwarder
   - ext/iohk-monitoring-framework.git/plugins/scribe-systemd
   # deps by iohk-monitoring-framework
-  - prometheus-2.1.2
-  - libsystemd-journal-1.4.4
-  - katip-0.8.4.0
+  - prometheus-2.2.2
+  - libsystemd-journal-1.4.5
+  - katip-0.8.5.0
 
   - ext/cardano-base.git/binary
   - ext/cardano-base.git/cardano-crypto-class
   - ext/cardano-base.git/cardano-crypto-praos
   - ext/cardano-base.git/slotting
+  - ext/cardano-base.git/strict-containers
 
   - ext/cardano-crypto.git
-  - ext/cardano-sl-x509.git
+  - ext/Win32-network.git
 
   #- ext/cardano-db-sync.git/cardano-db
   #- http-client-0.5.14
-
-    # Includes updated pretty printing function
-  #- git: https://github.com/well-typed/cborg.git
-  #  commit: 
-  #  subdirs:
-  #      - cborg
-  #      - serialise
-
-    # Includes a windows build fix (https://github.com/snoyberg/http-client/pull/430)
-  #- git: https://github.com/snoyberg/http-client.git
-  #  commit: 1a75bdfca014723dd5d40760fad854b3f0f37156
-  #  subdirs:
-  #      - http-client
 
 flags:
   cardano-crypto-praos:
@@ -161,8 +95,9 @@ nix:
   packages: [ zlib.dev, zlib.out
             , openssl.dev, openssl.out
             , libsodium.dev, libsodium.out
-            , haskell.compiler.ghc865
+            , haskell.compiler.ghc8104
             , pkg-config
             , systemd.dev
+            , rdkafka
             #, postgresql
             ]
