@@ -41,3 +41,6 @@
 [submodule "ext/Win32-network.git"]
 	path = ext/Win32-network.git
 	url = https://github.com/input-output-hk/Win32-network.git
+[submodule "ext/input-output-hk_libsodium.git"]
+	path = ext/input-output-hk_libsodium.git
+	url = https://github.com/input-output-hk/libsodium.git
