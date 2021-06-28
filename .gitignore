@@ -1,4 +1,6 @@
 bin/
 .stack-work/
 *.lock
+state-node-mainnet/
 
+ext/input-output-hk_libsodium.git/OUT

@@ -14,6 +14,8 @@ extra-deps:
   - ext/cardano-node.git/cardano-api
   - ext/cardano-node.git/cardano-config
 
+  #- ext/cardano-db-sync.git/cardano-db
+
   - async-timer-0.2.0.0
   - base16-bytestring-1.0.1.0
   - canonical-json-0.6.0.0
@@ -83,21 +85,17 @@ extra-deps:
   - ext/cardano-crypto.git
   - ext/Win32-network.git
 
-  #- ext/cardano-db-sync.git/cardano-db
-  #- http-client-0.5.14
-
 flags:
   cardano-crypto-praos:
-    external-libsodium-vrf: false
+    external-libsodium-vrf: true
 
+extra-include-dirs:
+  - ext/input-output-hk_libsodium.git/OUT/include
+extra-lib-dirs:
+  - ext/input-output-hk_libsodium.git/OUT/lib
+
+# depends on Nix for dependencies, but can be turned off with (enable: false)
 nix:
+  enable: true
   pure: true
-  packages: [ zlib.dev, zlib.out
-            , openssl.dev, openssl.out
-            , libsodium.dev, libsodium.out
-            , haskell.compiler.ghc8104
-            , pkg-config
-            , systemd.dev
-            , rdkafka
-            #, postgresql
-            ]
+  shell-file: stack.nix
