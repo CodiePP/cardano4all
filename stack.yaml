@@ -5,9 +5,6 @@ resolver: lts-17.13
 packages:
   - ext/cardano-node.git/cardano-node
   - ext/cardano-node.git/cardano-cli
-  #- ext/cardano-benchmarking.git/cardano-tx-generator
-  #- ext/cardano-benchmarking.git/cardano-rt-view
-  #- ext/cardano-benchmarking.git/bm-timeline
   #- ext/cardano-db-sync.git/cardano-db-sync
 
 extra-deps:
@@ -70,10 +67,10 @@ extra-deps:
   - ext/iohk-monitoring-framework.git/plugins/backend-monitoring
   - ext/iohk-monitoring-framework.git/plugins/backend-trace-acceptor
   - ext/iohk-monitoring-framework.git/plugins/backend-trace-forwarder
-    #  - ext/iohk-monitoring-framework.git/plugins/scribe-systemd
+  - ext/iohk-monitoring-framework.git/plugins/scribe-systemd
   # deps by iohk-monitoring-framework
   - prometheus-2.2.2
-    #  - libsystemd-journal-1.4.5
+  - libsystemd-journal-1.4.5
   - katip-0.8.5.0
 
   - ext/cardano-base.git/binary
@@ -96,6 +93,6 @@ extra-lib-dirs:
 
 # depends on Nix for dependencies, but can be turned off with (enable: false)
 nix:
-  enable: false
+  enable: true
   pure: true
   shell-file: stack.nix
