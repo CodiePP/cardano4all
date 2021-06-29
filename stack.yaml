@@ -70,10 +70,10 @@ extra-deps:
   - ext/iohk-monitoring-framework.git/plugins/backend-monitoring
   - ext/iohk-monitoring-framework.git/plugins/backend-trace-acceptor
   - ext/iohk-monitoring-framework.git/plugins/backend-trace-forwarder
-  - ext/iohk-monitoring-framework.git/plugins/scribe-systemd
+    #  - ext/iohk-monitoring-framework.git/plugins/scribe-systemd
   # deps by iohk-monitoring-framework
   - prometheus-2.2.2
-  - libsystemd-journal-1.4.5
+    #  - libsystemd-journal-1.4.5
   - katip-0.8.5.0
 
   - ext/cardano-base.git/binary
@@ -96,6 +96,6 @@ extra-lib-dirs:
 
 # depends on Nix for dependencies, but can be turned off with (enable: false)
 nix:
-  enable: true
+  enable: false
   pure: true
   shell-file: stack.nix
