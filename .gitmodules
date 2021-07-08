@@ -44,3 +44,6 @@
 [submodule "ext/input-output-hk_libsodium.git"]
 	path = ext/input-output-hk_libsodium.git
 	url = https://github.com/input-output-hk/libsodium.git
+[submodule "ext/data-science.git"]
+	path = ext/data-science.git
+	url = git@github.com:input-output-hk/data-science.git

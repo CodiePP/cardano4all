@@ -5,6 +5,7 @@ resolver: lts-17.13
 packages:
   - ext/cardano-node.git/cardano-node
   - ext/cardano-node.git/cardano-cli
+  - ext/data-science.git/processes/cardano-block-follower
   #- ext/cardano-db-sync.git/cardano-db-sync
 
 extra-deps:
@@ -86,6 +87,8 @@ flags:
   cardano-crypto-praos:
     external-libsodium-vrf: true
 
+# also set environment variable:
+# export PKG_CONFIG_PATH=$(pwd)/ext/input-output-hk_libsodium.git/OUT/lib/pkgconfig:$PKG_CONFIG_PATH
 extra-include-dirs:
   - ext/input-output-hk_libsodium.git/OUT/include
 extra-lib-dirs:
