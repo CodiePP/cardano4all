@@ -3,15 +3,15 @@ local-bin-path: bin/
 resolver: lts-17.13
 
 packages:
-  - ext/cardano-node.git/cardano-node
-  - ext/cardano-node.git/cardano-cli
   - ext/data-science.git/processes/cardano-block-follower
-  #- ext/cardano-db-sync.git/cardano-db-sync
+  - ext/cardano-node.git/cardano-cli
+  - ext/cardano-node.git/cardano-node
+  - ext/cardano-node.git/cardano-api
 
 extra-deps:
-  - ext/cardano-node.git/cardano-api
   - ext/cardano-node.git/cardano-config
 
+  #- ext/cardano-db-sync.git/cardano-db-sync
   #- ext/cardano-db-sync.git/cardano-db
 
   - async-timer-0.2.0.0
@@ -86,6 +86,9 @@ extra-deps:
 flags:
   cardano-crypto-praos:
     external-libsodium-vrf: true
+
+ghc-options:
+  '$everything': -haddock
 
 # also set environment variable:
 # export PKG_CONFIG_PATH=$(pwd)/ext/input-output-hk_libsodium.git/OUT/lib/pkgconfig:$PKG_CONFIG_PATH

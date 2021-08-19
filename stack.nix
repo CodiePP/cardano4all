@@ -11,6 +11,11 @@ haskell.lib.buildStackProject {
       gcc
       libtool
       haskell.compiler.ghc8104
+      ccls
+      vscode
+
+      ormolu
+      haskell-language-server
 
       zlib
       systemd
