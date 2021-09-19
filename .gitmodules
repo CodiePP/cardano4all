@@ -47,3 +47,6 @@
 [submodule "ext/data-science.git"]
 	path = ext/data-science.git
 	url = git@github.com:input-output-hk/data-science.git
+[submodule "ext/plutus.git"]
+	path = ext/plutus.git
+	url = https://github.com/input-output-hk/plutus.git

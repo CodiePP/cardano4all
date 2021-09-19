@@ -1,8 +1,6 @@
-#{ghc}:
 with (import <nixpkgs> {});
 
 haskell.lib.buildStackProject {
-  #inherit ghc;
   name = "cardano4all";
   buildInputs = [
       automake
@@ -10,7 +8,8 @@ haskell.lib.buildStackProject {
       pkg-config
       gcc
       libtool
-      haskell.compiler.ghc8104
+      #haskell.compiler.ghc8104
+      ghc
       ccls
       vscode
 
@@ -25,6 +24,7 @@ haskell.lib.buildStackProject {
       echo 'Haskel Stack nixified environment'
       ghc --version
       export PKG_CONFIG_PATH="$(pwd)/ext/input-output-hk_libsodium.git/OUT/lib/pkgconfig:$PKG_CONFIG_PATH"
+      export LD_LIBRARY_PATH="$(pwd)/ext/input-output-hk_libsodium.git/OUT/lib:$LD_LIBRARY_PATH"
     '';
 }
 

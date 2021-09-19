@@ -1,6 +1,7 @@
 local-bin-path: bin/
 
-resolver: lts-17.13
+resolver: lts-18.9
+compiler: ghc-8.10.7
 
 packages:
   - ext/data-science.git/processes/cardano-block-follower
@@ -38,7 +39,8 @@ extra-deps:
   - ext/ouroboros-network.git/ouroboros-consensus-cardano
   - ext/ouroboros-network.git/ouroboros-consensus-shelley
   - ext/ouroboros-network.git/io-sim
-  - ext/ouroboros-network.git/io-sim-classes
+  - ext/ouroboros-network.git/io-classes
+  - ext/ouroboros-network.git/monoidal-synchronisation
 
   - ext/cardano-ledger-specs.git/cardano-ledger-core
   - ext/cardano-ledger-specs.git/semantics/executable-spec
@@ -54,6 +56,8 @@ extra-deps:
   - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/shelley-spec-ledger-test
   - ext/cardano-ledger-specs.git/shelley-ma/impl
   - ext/cardano-ledger-specs.git/shelley-ma/shelley-ma-test
+  - ext/cardano-ledger-specs.git/alonzo/impl
+  - ext/cardano-ledger-specs.git/alonzo/test
 
   - ext/cardano-prelude.git/cardano-prelude
   - ext/cardano-prelude.git/cardano-prelude-test
@@ -74,14 +78,48 @@ extra-deps:
   - libsystemd-journal-1.4.5
   - katip-0.8.5.0
 
+  - ext/cardano-base.git/base-deriving-via
   - ext/cardano-base.git/binary
+  - ext/cardano-base.git/binary/test
   - ext/cardano-base.git/cardano-crypto-class
   - ext/cardano-base.git/cardano-crypto-praos
+  - ext/cardano-base.git/measures
+  - ext/cardano-base.git/orphans-deriving-via
   - ext/cardano-base.git/slotting
   - ext/cardano-base.git/strict-containers
 
   - ext/cardano-crypto.git
   - ext/Win32-network.git
+
+  - ext/plutus.git/plutus-core
+  - ext/plutus.git/plutus-ledger
+  - ext/plutus.git/plutus-ledger-api
+  - ext/plutus.git/plutus-tx
+  - ext/plutus.git/plutus-tx-plugin
+  - ext/plutus.git/prettyprinter-configurable
+  - ext/plutus.git/stubs/plutus-ghc-stub
+  - ext/plutus.git/word-array
+
+    # extra deps
+  - Unique-0.4.7.8@sha256:9661f45aa31dde119a2114566166ea38b011a45653337045ee4ced75636533c0,2067
+  - composition-prelude-3.0.0.2@sha256:1ffed216bd28d810fce0b5be83a661e2a892696d73b3f8de5c0f5edb9b5f0090,1216
+  - lazy-search-0.1.2.1@sha256:c942a01e4a64881f89c72eaef5e3a78eba8750759cd66996c6746a2a7cabe703,1199
+  - monoidal-containers-0.6.0.1@sha256:f56ea8fe91ff93da140e38b8dab4b94437b901818c13ba72fc7fc802290323ee,2583
+  - moo-1.2@sha256:0c4be1a01548db785dcbbe6b8c98579dbf03c5b3b536e0420dce3ba6a61337cb,5951
+  - size-based-0.1.2.0@sha256:1b33da89d270189661dbbda49a88b0c21d2fc2f7a407e7a2b1933e2faf0f5d4d,1258
+  - gray-code-0.3.1@sha256:2c8a4ed9c9ee37320305610604d6d93504e0813d7c9768949af418b53043185a,2388
+
+  - git: https://github.com/input-output-hk/goblins
+    commit: cde90a2b27f79187ca8310b6549331e59595e7ba
+  - git: https://github.com/input-output-hk/optparse-applicative
+    commit: 7497a29cb998721a9068d5725d49461f2bba0e7a
+  - git: https://github.com/input-output-hk/flat
+    commit: ee59880f47ab835dbd73bea0847dab7869fc20d8
+  - git: https://github.com/input-output-hk/hedgehog-extras
+    commit: edf6945007177a638fbeb8802397f3a6f4e47c14
+
+
+allow-newer: true
 
 flags:
   cardano-crypto-praos:
