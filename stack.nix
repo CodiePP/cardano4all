@@ -8,6 +8,7 @@ haskell.lib.buildStackProject {
       pkg-config
       gcc
       libtool
+      cabal-install
       #haskell.compiler.ghc8104
       ghc
       ccls
