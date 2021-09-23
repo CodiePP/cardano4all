@@ -85,12 +85,12 @@ haddock-all: False
 package cardan-crypto-praos
   flags: +external-libsodium-vrf
 
-extra-lib-dirs: ${pkgroot}/ext/input-output-hk_libsodium.git/OUT/lib
 
 -- hacks
 allow-newer:
   monoidal-containers:aeson,
   size-based:template-haskell
+
 
 -- extra stuff
 source-repository-package
