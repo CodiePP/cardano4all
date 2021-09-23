@@ -76,23 +76,16 @@ packages:
   ext/plutus.git/stubs/plutus-ghc-stub
   ext/plutus.git/word-array
 
+
+-- settings
 tests: False
+documentation: False
+haddock-all: False
 
 package cardan-crypto-praos
-  flags: -external-libsodium-vrf
+  flags: +external-libsodium-vrf
 
--- also set environment variable:
---# export PKG_CONFIG_PATH=$(pwd)/ext/input-output-hk_libsodium.git/OUT/lib/pkgconfig:$PKG_CONFIG_PATH
---#extra-include-dirs:
---#  - ext/input-output-hk_libsodium.git/OUT/include
---#extra-lib-dirs:
---#  - ext/input-output-hk_libsodium.git/OUT/lib
-
---# depends on Nix for dependencies, but can be turned off with (enable: false)
---#nix:
---#  enable: true
---#  pure: true
---#  shell-file: stack.nix
+extra-lib-dirs: ${pkgroot}/ext/input-output-hk_libsodium.git/OUT/lib
 
 -- hacks
 allow-newer:
