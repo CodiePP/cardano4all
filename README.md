@@ -30,10 +30,16 @@ make install
 
 ```
 
-set the variable PKG_CONFIG_PATH to point to the locally build _libsodium_ so that it will be found by `stack` when linking the Haskell node.
+set the variable PKG_CONFIG_PATH to point to the locally build _libsodium_ so that it will be found when linking the Haskell node.
 
 ```sh
 export PKG_CONFIG_PATH=$(pwd)/ext/input-output-hk_libsodium.git/OUT/lib/pkgconfig:$PKG_CONFIG_PATH
+```
+
+And, set the path to the newly built _libsodium_ libraries for the linker:
+
+```sh
+export LD_LIBRARY_PATH=$(pwd)/ext/input-output-hk_libsodium.git/OUT/lib:$LD_LIBRARY_PATH
 ```
 
 ### 3 build
@@ -45,6 +51,16 @@ export PKG_CONFIG_PATH=$(pwd)/ext/input-output-hk_libsodium.git/OUT/lib/pkgconfi
 ### 4 run test suite
 
 4) `stack`:   _`$`_ `stack test`
+
+### Alternative: building using _cabal_
+
+```sh
+cabal build cardano-cli
+cabal build cardano-node
+
+cabal install --install-method=copy --overwrite-policy=always --installdir=./bin/ cardano-cli
+cabal install --install-method=copy --overwrite-policy=always --installdir=./bin/ cardano-node
+```
 
 ## System setup *Linux*
 

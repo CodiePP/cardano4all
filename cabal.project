@@ -1,0 +1,119 @@
+packages:
+  
+  ext/cardano-node.git/cardano-cli
+  ext/cardano-node.git/cardano-node
+  ext/cardano-node.git/cardano-api
+  ext/cardano-node.git/cardano-config
+
+  --ext/cardano-db-sync.git/cardano-db-sync
+  --ext/cardano-db-sync.git/cardano-db
+
+  ext/ouroboros-network.git/typed-protocols
+  ext/ouroboros-network.git/typed-protocols-examples
+  ext/ouroboros-network.git/network-mux
+  ext/ouroboros-network.git/ouroboros-network
+  ext/ouroboros-network.git/ouroboros-network-framework
+  ext/ouroboros-network.git/ouroboros-network-testing
+  ext/ouroboros-network.git/ouroboros-consensus
+  ext/ouroboros-network.git/ouroboros-consensus-byron
+  ext/ouroboros-network.git/ouroboros-consensus-cardano
+  ext/ouroboros-network.git/ouroboros-consensus-shelley
+  ext/ouroboros-network.git/io-sim
+  ext/ouroboros-network.git/io-classes
+  ext/ouroboros-network.git/monoidal-synchronisation
+
+  ext/cardano-ledger-specs.git/cardano-ledger-core
+  ext/cardano-ledger-specs.git/semantics/executable-spec
+  ext/cardano-ledger-specs.git/semantics/small-steps-test
+  ext/cardano-ledger-specs.git/byron/ledger/executable-spec
+  ext/cardano-ledger-specs.git/byron/ledger/impl
+  ext/cardano-ledger-specs.git/byron/ledger/impl/test
+  ext/cardano-ledger-specs.git/byron/crypto
+  ext/cardano-ledger-specs.git/byron/crypto/test
+  ext/cardano-ledger-specs.git/byron/chain/executable-spec
+  ext/cardano-ledger-specs.git/shelley/chain-and-ledger/dependencies/non-integer
+  ext/cardano-ledger-specs.git/shelley/chain-and-ledger/executable-spec
+  ext/cardano-ledger-specs.git/shelley/chain-and-ledger/shelley-spec-ledger-test
+  ext/cardano-ledger-specs.git/shelley-ma/impl
+  ext/cardano-ledger-specs.git/shelley-ma/shelley-ma-test
+  ext/cardano-ledger-specs.git/alonzo/impl
+  ext/cardano-ledger-specs.git/alonzo/test
+
+  ext/cardano-prelude.git/cardano-prelude
+  ext/cardano-prelude.git/cardano-prelude-test
+
+  ext/iohk-monitoring-framework.git/contra-tracer
+  ext/iohk-monitoring-framework.git/tracer-transformers
+  ext/iohk-monitoring-framework.git/iohk-monitoring
+  ext/iohk-monitoring-framework.git/plugins/backend-aggregation
+  ext/iohk-monitoring-framework.git/plugins/backend-editor
+  ext/iohk-monitoring-framework.git/plugins/backend-ekg
+  ext/iohk-monitoring-framework.git/plugins/backend-kafka
+  ext/iohk-monitoring-framework.git/plugins/backend-monitoring
+  ext/iohk-monitoring-framework.git/plugins/backend-trace-acceptor
+  ext/iohk-monitoring-framework.git/plugins/backend-trace-forwarder
+  ext/iohk-monitoring-framework.git/plugins/scribe-systemd
+
+  ext/cardano-base.git/base-deriving-via
+  ext/cardano-base.git/binary
+  ext/cardano-base.git/binary/test
+  ext/cardano-base.git/cardano-crypto-class
+  ext/cardano-base.git/cardano-crypto-praos
+  ext/cardano-base.git/measures
+  ext/cardano-base.git/orphans-deriving-via
+  ext/cardano-base.git/slotting
+  ext/cardano-base.git/strict-containers
+
+  ext/cardano-crypto.git
+  ext/Win32-network.git
+
+  ext/plutus.git/plutus-core
+  ext/plutus.git/plutus-ledger
+  ext/plutus.git/plutus-ledger-api
+  ext/plutus.git/plutus-tx
+  ext/plutus.git/plutus-tx-plugin
+  ext/plutus.git/prettyprinter-configurable
+  ext/plutus.git/stubs/plutus-ghc-stub
+  ext/plutus.git/word-array
+
+
+-- settings
+tests: False
+documentation: False
+haddock-all: False
+
+package cardan-crypto-praos
+  flags: +external-libsodium-vrf
+
+
+-- hacks
+allow-newer:
+  monoidal-containers:aeson,
+  size-based:template-haskell
+
+
+-- extra stuff
+source-repository-package
+  type: git
+  location: https://github.com/input-output-hk/goblins
+  tag: cde90a2b27f79187ca8310b6549331e59595e7ba
+  --sha256: 17c88rbva3iw82yg9srlxjv2ia5wjb9cyqw44hik565f5v9svnyg
+
+source-repository-package
+  type: git
+  location: https://github.com/input-output-hk/flat
+  tag: ee59880f47ab835dbd73bea0847dab7869fc20d8
+  --sha256: 1lrzknw765pz2j97nvv9ip3l1mcpf2zr4n56hwlz0rk7wq7ls4cm
+
+source-repository-package
+  type: git
+  location: https://github.com/input-output-hk/optparse-applicative
+  tag: 7497a29cb998721a9068d5725d49461f2bba0e7a
+  --sha256: 1gvsrg925vynwgqwplgjmp53vj953qyh3wbdf34pw21c8r47w35r
+
+source-repository-package
+  type: git
+  location: https://github.com/input-output-hk/hedgehog-extras
+  tag: edf6945007177a638fbeb8802397f3a6f4e47c14
+  --sha256: 0wc7qzkc7j4ns2rz562h6qrx2f8xyq7yjcb7zidnj7f6j0pcd0i9
+
