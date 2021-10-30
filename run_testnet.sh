@@ -2,12 +2,12 @@
 
 VERSION="1.30.1"
 HOST=127.0.0.1
-PORT=31301
-STATEDIR="state-node-mainnet/state-${VERSION}"
+PORT=41301
+STATEDIR="state-node-testnet/state-${VERSION}"
 mkdir -vp ${STATEDIR}
 
-CONFIG=mainnet-config.json
-TOPOLOGY=ext/cardano-node.git/configuration/cardano/mainnet-topology.json
+CONFIG=configuration/testnet-config.json
+TOPOLOGY=configuration/testnet-topology.json
 
 HSRTS="+RTS -N2 -A16m -qg -qb --disable-delayed-os-memory-return -RTS"
 

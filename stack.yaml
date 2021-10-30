@@ -1,7 +1,7 @@
 local-bin-path: bin/
 
 resolver: lts-18.9
-compiler: ghc-8.10.7
+compiler: ghc-8.10.4
 
 packages:
   - ext/cardano-node.git/cardano-cli

@@ -14,8 +14,8 @@ haskell.lib.buildStackProject {
       ccls
       vscode
 
-      ormolu
-      haskell-language-server
+      #ormolu
+      #haskell-language-server
 
       zlib
       systemd
