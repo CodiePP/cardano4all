@@ -1,8 +1,8 @@
 #!/bin/sh
 
-VERSION="1.27.0"
+VERSION="1.30.1"
 HOST=127.0.0.1
-PORT=30270
+PORT=31301
 STATEDIR="state-node-mainnet/state-${VERSION}"
 mkdir -vp ${STATEDIR}
 
