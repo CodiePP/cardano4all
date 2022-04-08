@@ -4,3 +4,4 @@ bin/
 state-node-mainnet/
 
 ext/input-output-hk_libsodium.git/OUT
+.DS_Store

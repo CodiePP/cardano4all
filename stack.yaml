@@ -1,7 +1,7 @@
 local-bin-path: bin/
 
 resolver: lts-18.9
-compiler: ghc-8.10.4
+compiler: ghc-8.10.7
 
 packages:
   - ext/cardano-node.git/cardano-cli
@@ -26,37 +26,42 @@ extra-deps:
   - transformers-except-0.1.1
   - unliftio-core-0.1.2.0
 
-
-  - ext/ouroboros-network.git/typed-protocols
-  - ext/ouroboros-network.git/typed-protocols-examples
+  - ext/ouroboros-network.git/io-sim
+  - ext/ouroboros-network.git/io-classes
+  - ext/ouroboros-network.git/monoidal-synchronisation
   - ext/ouroboros-network.git/network-mux
-  - ext/ouroboros-network.git/ouroboros-network
-  - ext/ouroboros-network.git/ouroboros-network-framework
-  - ext/ouroboros-network.git/ouroboros-network-testing
   - ext/ouroboros-network.git/ouroboros-consensus
   - ext/ouroboros-network.git/ouroboros-consensus-byron
   - ext/ouroboros-network.git/ouroboros-consensus-cardano
   - ext/ouroboros-network.git/ouroboros-consensus-shelley
-  - ext/ouroboros-network.git/io-sim
-  - ext/ouroboros-network.git/io-classes
-  - ext/ouroboros-network.git/monoidal-synchronisation
+  - ext/ouroboros-network.git/ouroboros-network
+  - ext/ouroboros-network.git/ouroboros-network-framework
+  - ext/ouroboros-network.git/ouroboros-network-testing
+  - ext/ouroboros-network.git/typed-protocols
+  - ext/ouroboros-network.git/typed-protocols-cborg
+  - ext/ouroboros-network.git/typed-protocols-examples
 
-  - ext/cardano-ledger-specs.git/cardano-ledger-core
-  - ext/cardano-ledger-specs.git/semantics/executable-spec
-  - ext/cardano-ledger-specs.git/semantics/small-steps-test
-  - ext/cardano-ledger-specs.git/byron/ledger/executable-spec
-  - ext/cardano-ledger-specs.git/byron/ledger/impl
-  - ext/cardano-ledger-specs.git/byron/ledger/impl/test
-  - ext/cardano-ledger-specs.git/byron/crypto
-  - ext/cardano-ledger-specs.git/byron/crypto/test
-  - ext/cardano-ledger-specs.git/byron/chain/executable-spec
-  - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/dependencies/non-integer
-  - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/executable-spec
-  - ext/cardano-ledger-specs.git/shelley/chain-and-ledger/shelley-spec-ledger-test
-  - ext/cardano-ledger-specs.git/shelley-ma/impl
-  - ext/cardano-ledger-specs.git/shelley-ma/shelley-ma-test
-  - ext/cardano-ledger-specs.git/alonzo/impl
-  - ext/cardano-ledger-specs.git/alonzo/test
+  - ext/cardano-ledger-specs.git/eras/alonzo/impl
+  - ext/cardano-ledger-specs.git/eras/alonzo/test-suite
+  - ext/cardano-ledger-specs.git/eras/byron/chain/executable-spec
+  - ext/cardano-ledger-specs.git/eras/byron/crypto
+  - ext/cardano-ledger-specs.git/eras/byron/crypto/test
+  - ext/cardano-ledger-specs.git/eras/byron/ledger/executable-spec
+  - ext/cardano-ledger-specs.git/eras/byron/ledger/impl
+  - ext/cardano-ledger-specs.git/eras/byron/ledger/impl/test
+  - ext/cardano-ledger-specs.git/eras/shelley/impl
+  - ext/cardano-ledger-specs.git/eras/shelley/test-suite
+  - ext/cardano-ledger-specs.git/eras/shelley-ma/impl
+  - ext/cardano-ledger-specs.git/eras/shelley-ma/test-suite
+  - ext/cardano-ledger-specs.git/libs/cardano-ledger-core
+  - ext/cardano-ledger-specs.git/libs/cardano-ledger-pretty
+  - ext/cardano-ledger-specs.git/libs/cardano-protocol-tpraos
+  - ext/cardano-ledger-specs.git/libs/small-steps
+  - ext/cardano-ledger-specs.git/libs/small-steps-test
+  - ext/cardano-ledger-specs.git/libs/non-integral
+  - ext/cardano-ledger-specs.git/eras/shelley/chain-and-ledger/executable-spec
+  - ext/cardano-ledger-specs.git/eras/shelley/chain-and-ledger/shelley-spec-ledger-test
+  - ext/cardano-ledger-specs.git/eras/shelley/chain-and-ledger/dependencies/non-integer
 
   - ext/cardano-prelude.git/cardano-prelude
   - ext/cardano-prelude.git/cardano-prelude-test
@@ -90,6 +95,7 @@ extra-deps:
   - ext/cardano-crypto.git
   - ext/Win32-network.git
 
+  - ext/plutus.git/freer-extras
   - ext/plutus.git/plutus-core
   - ext/plutus.git/plutus-ledger
   - ext/plutus.git/plutus-ledger-api
@@ -107,6 +113,7 @@ extra-deps:
   - moo-1.2@sha256:0c4be1a01548db785dcbbe6b8c98579dbf03c5b3b536e0420dce3ba6a61337cb,5951
   - size-based-0.1.2.0@sha256:1b33da89d270189661dbbda49a88b0c21d2fc2f7a407e7a2b1933e2faf0f5d4d,1258
   - gray-code-0.3.1@sha256:2c8a4ed9c9ee37320305610604d6d93504e0813d7c9768949af418b53043185a,2388
+  - dom-lt-0.2.3@sha256:89f17bbeb0d23f5a46fe7099b81cc9b4b5df32aadb5080fc171c874aafc802c0,1850
 
   - git: https://github.com/input-output-hk/goblins
     commit: cde90a2b27f79187ca8310b6549331e59595e7ba
@@ -116,7 +123,8 @@ extra-deps:
     commit: ee59880f47ab835dbd73bea0847dab7869fc20d8
   - git: https://github.com/input-output-hk/hedgehog-extras
     commit: edf6945007177a638fbeb8802397f3a6f4e47c14
-
+  - git: https://github.com/input-output-hk/ekg-forward
+    commit: d9e8fd302fa6ba41c07183d371e6777286d37bc2
 
 allow-newer: true
 
@@ -134,8 +142,8 @@ extra-include-dirs:
 extra-lib-dirs:
   - ext/input-output-hk_libsodium.git/OUT/lib
 
-# depends on Nix for dependencies, but can be turned off with (enable: false)
+# use Nix for dependencies: can be turned on with (enable: true)
 nix:
-  enable: true
-  pure: true
+  enable: false
+  pure: false
   shell-file: stack.nix
