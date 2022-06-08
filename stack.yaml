@@ -9,7 +9,6 @@ packages:
   - ext/cardano-node.git/cardano-api
 
 extra-deps:
-  - ext/cardano-node.git/cardano-config
 
   #- ext/cardano-db-sync.git/cardano-db-sync
   #- ext/cardano-db-sync.git/cardano-db
@@ -26,6 +25,8 @@ extra-deps:
   - transformers-except-0.1.1
   - unliftio-core-0.1.2.0
 
+  - ext/cardano-config.git
+
   - ext/ouroboros-network.git/io-sim
   - ext/ouroboros-network.git/io-classes
   - ext/ouroboros-network.git/monoidal-synchronisation
@@ -41,27 +42,27 @@ extra-deps:
   - ext/ouroboros-network.git/typed-protocols-cborg
   - ext/ouroboros-network.git/typed-protocols-examples
 
-  - ext/cardano-ledger-specs.git/eras/alonzo/impl
-  - ext/cardano-ledger-specs.git/eras/alonzo/test-suite
-  - ext/cardano-ledger-specs.git/eras/byron/chain/executable-spec
-  - ext/cardano-ledger-specs.git/eras/byron/crypto
-  - ext/cardano-ledger-specs.git/eras/byron/crypto/test
-  - ext/cardano-ledger-specs.git/eras/byron/ledger/executable-spec
-  - ext/cardano-ledger-specs.git/eras/byron/ledger/impl
-  - ext/cardano-ledger-specs.git/eras/byron/ledger/impl/test
-  - ext/cardano-ledger-specs.git/eras/shelley/impl
-  - ext/cardano-ledger-specs.git/eras/shelley/test-suite
-  - ext/cardano-ledger-specs.git/eras/shelley-ma/impl
-  - ext/cardano-ledger-specs.git/eras/shelley-ma/test-suite
-  - ext/cardano-ledger-specs.git/libs/cardano-ledger-core
-  - ext/cardano-ledger-specs.git/libs/cardano-ledger-pretty
-  - ext/cardano-ledger-specs.git/libs/cardano-protocol-tpraos
-  - ext/cardano-ledger-specs.git/libs/small-steps
-  - ext/cardano-ledger-specs.git/libs/small-steps-test
-  - ext/cardano-ledger-specs.git/libs/non-integral
-  - ext/cardano-ledger-specs.git/eras/shelley/chain-and-ledger/executable-spec
-  - ext/cardano-ledger-specs.git/eras/shelley/chain-and-ledger/shelley-spec-ledger-test
-  - ext/cardano-ledger-specs.git/eras/shelley/chain-and-ledger/dependencies/non-integer
+  - ext/cardano-ledger.git/eras/alonzo/impl
+  - ext/cardano-ledger.git/eras/alonzo/test-suite
+  - ext/cardano-ledger.git/eras/byron/chain/executable-spec
+  - ext/cardano-ledger.git/eras/byron/crypto
+  - ext/cardano-ledger.git/eras/byron/crypto/test
+  - ext/cardano-ledger.git/eras/byron/ledger/executable-spec
+  - ext/cardano-ledger.git/eras/byron/ledger/impl
+  - ext/cardano-ledger.git/eras/byron/ledger/impl/test
+  - ext/cardano-ledger.git/eras/shelley/impl
+  - ext/cardano-ledger.git/eras/shelley/test-suite
+  - ext/cardano-ledger.git/eras/shelley-ma/impl
+  - ext/cardano-ledger.git/eras/shelley-ma/test-suite
+  - ext/cardano-ledger.git/libs/cardano-ledger-core
+  - ext/cardano-ledger.git/libs/cardano-ledger-pretty
+  - ext/cardano-ledger.git/libs/cardano-protocol-tpraos
+  - ext/cardano-ledger.git/libs/small-steps
+  - ext/cardano-ledger.git/libs/small-steps-test
+  - ext/cardano-ledger.git/libs/non-integral
+  - ext/cardano-ledger.git/eras/shelley/chain-and-ledger/executable-spec
+  - ext/cardano-ledger.git/eras/shelley/chain-and-ledger/shelley-spec-ledger-test
+  - ext/cardano-ledger.git/eras/shelley/chain-and-ledger/dependencies/non-integer
 
   - ext/cardano-prelude.git/cardano-prelude
   - ext/cardano-prelude.git/cardano-prelude-test

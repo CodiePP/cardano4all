@@ -11,7 +11,7 @@
 	url = git@github.com:input-output-hk/cardano-crypto.git
 	branch = master
 [submodule "cardano-ledger-specs.git"]
-	path = ext/cardano-ledger-specs.git
+	path = ext/cardano-ledger.git
 	url = git@github.com:input-output-hk/cardano-ledger-specs.git
 	branch = master
 [submodule "cardano-wallet.git"]
@@ -47,3 +47,6 @@
 [submodule "ext/plutus.git"]
 	path = ext/plutus.git
 	url = https://github.com/input-output-hk/plutus.git
+[submodule "ext/cardano-config.git"]
+	path = ext/cardano-config.git
+	url = https://github.com/input-output-hk/cardano-config
