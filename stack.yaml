@@ -1,68 +1,92 @@
 local-bin-path: bin/
 
-resolver: lts-18.9
+# resolver: lts-18.28
+resolver: lts-19.19
 compiler: ghc-8.10.7
 
 packages:
   - ext/cardano-node.git/cardano-cli
   - ext/cardano-node.git/cardano-node
   - ext/cardano-node.git/cardano-api
+  - ext/cardano-node.git/cardano-git-rev
+  - ext/cardano-node.git/cardano-node-capi
+  - ext/cardano-node.git/cardano-submit-api
+  - ext/cardano-node.git/cardano-tracer
+  - ext/cardano-node.git/trace-dispatcher
+  - ext/cardano-node.git/trace-resources
+  - ext/cardano-node.git/trace-forward
 
 extra-deps:
 
   #- ext/cardano-db-sync.git/cardano-db-sync
   #- ext/cardano-db-sync.git/cardano-db
 
-  - async-timer-0.2.0.0
-  - base16-bytestring-1.0.1.0
-  - canonical-json-0.6.0.0
-  - dns-3.0.4
-  - network-3.1.2.1
-  - nothunks-0.1.2
-  - partial-order-0.2.0.0
-  - statistics-linreg-0.3
-  - streaming-binary-0.2.2.0
-  - transformers-except-0.1.1
-  - unliftio-core-0.1.2.0
-
   - ext/cardano-config.git
 
-  - ext/ouroboros-network.git/io-sim
-  - ext/ouroboros-network.git/io-classes
-  - ext/ouroboros-network.git/monoidal-synchronisation
-  - ext/ouroboros-network.git/network-mux
-  - ext/ouroboros-network.git/ouroboros-consensus
-  - ext/ouroboros-network.git/ouroboros-consensus-byron
-  - ext/ouroboros-network.git/ouroboros-consensus-cardano
-  - ext/ouroboros-network.git/ouroboros-consensus-shelley
-  - ext/ouroboros-network.git/ouroboros-network
-  - ext/ouroboros-network.git/ouroboros-network-framework
-  - ext/ouroboros-network.git/ouroboros-network-testing
   - ext/ouroboros-network.git/typed-protocols
   - ext/ouroboros-network.git/typed-protocols-cborg
   - ext/ouroboros-network.git/typed-protocols-examples
+  - ext/ouroboros-network.git/monoidal-synchronisation
+  - ext/ouroboros-network.git/network-mux
+  - ext/ouroboros-network.git/ouroboros-network
+  - ext/ouroboros-network.git/ouroboros-network-framework
+  - ext/ouroboros-network.git/ouroboros-network-testing
+  - ext/ouroboros-network.git/ouroboros-consensus
+  - ext/ouroboros-network.git/ouroboros-consensus-byron
+  - ext/ouroboros-network.git/ouroboros-consensus-byron-test
+  - ext/ouroboros-network.git/ouroboros-consensus-byronspec
+  - ext/ouroboros-network.git/ouroboros-consensus-cardano
+  - ext/ouroboros-network.git/ouroboros-consensus-cardano-test
+  - ext/ouroboros-network.git/ouroboros-consensus-mock
+  - ext/ouroboros-network.git/ouroboros-consensus-mock-test
+  - ext/ouroboros-network.git/ouroboros-consensus-protocol
+  - ext/ouroboros-network.git/ouroboros-consensus-shelley
+  - ext/ouroboros-network.git/ouroboros-consensus-shelley-test
+  - ext/ouroboros-network.git/ouroboros-consensus-test
+  - ext/ouroboros-network.git/io-sim
+  - ext/ouroboros-network.git/io-classes
+  - ext/ouroboros-network.git/strict-stm
+  
 
+    #  - ext/io-sim.git/io-classes
+    #  - ext/io-sim.git/io-sim
+    #  - ext/io-sim.git/strict-stm
+
+    #  - ext/typed-protocols.git/typed-protocols
+    #  - ext/typed-protocols.git/typed-protocols-cborg
+    #  - ext/typed-protocols.git/typed-protocols-examples
+
+    #  - ext/cardano-ledger.git/eras/allegra/impl
   - ext/cardano-ledger.git/eras/alonzo/impl
   - ext/cardano-ledger.git/eras/alonzo/test-suite
-  - ext/cardano-ledger.git/eras/byron/chain/executable-spec
-  - ext/cardano-ledger.git/eras/byron/crypto
-  - ext/cardano-ledger.git/eras/byron/crypto/test
-  - ext/cardano-ledger.git/eras/byron/ledger/executable-spec
-  - ext/cardano-ledger.git/eras/byron/ledger/impl
-  - ext/cardano-ledger.git/eras/byron/ledger/impl/test
+  - ext/cardano-ledger.git/eras/babbage/impl
+  - ext/cardano-ledger.git/eras/babbage/test-suite
+    #  - ext/cardano-ledger.git/eras/conway/impl
+    #  - ext/cardano-ledger.git/eras/conway/test-suite
+    #  - ext/cardano-ledger.git/eras/mary/impl
   - ext/cardano-ledger.git/eras/shelley/impl
   - ext/cardano-ledger.git/eras/shelley/test-suite
   - ext/cardano-ledger.git/eras/shelley-ma/impl
   - ext/cardano-ledger.git/eras/shelley-ma/test-suite
+    #  - ext/cardano-ledger.git/libs/cardano-ledger-api
+    #  - ext/cardano-ledger.git/libs/cardano-ledger-binary
   - ext/cardano-ledger.git/libs/cardano-ledger-core
   - ext/cardano-ledger.git/libs/cardano-ledger-pretty
   - ext/cardano-ledger.git/libs/cardano-protocol-tpraos
+  - ext/cardano-ledger.git/libs/cardano-data
+  - ext/cardano-ledger.git/libs/non-integral
+  - ext/cardano-ledger.git/libs/set-algebra
   - ext/cardano-ledger.git/libs/small-steps
   - ext/cardano-ledger.git/libs/small-steps-test
-  - ext/cardano-ledger.git/libs/non-integral
-  - ext/cardano-ledger.git/eras/shelley/chain-and-ledger/executable-spec
-  - ext/cardano-ledger.git/eras/shelley/chain-and-ledger/shelley-spec-ledger-test
-  - ext/cardano-ledger.git/eras/shelley/chain-and-ledger/dependencies/non-integer
+  - ext/cardano-ledger.git/libs/vector-map
+  - ext/cardano-ledger.git/eras/byron/chain/executable-spec
+  - ext/cardano-ledger.git/eras/byron/ledger/executable-spec
+  - ext/cardano-ledger.git/eras/byron/ledger/impl
+  - ext/cardano-ledger.git/eras/byron/ledger/impl/test
+  - ext/cardano-ledger.git/eras/byron/crypto
+  - ext/cardano-ledger.git/eras/byron/crypto/test
+  - ext/cardano-ledger.git/libs/plutus-preprocessor
+  - ext/cardano-ledger.git/libs/ledger-state
 
   - ext/cardano-prelude.git/cardano-prelude
   - ext/cardano-prelude.git/cardano-prelude-test
@@ -81,40 +105,64 @@ extra-deps:
   # deps by iohk-monitoring-framework
   - prometheus-2.2.2
   - libsystemd-journal-1.4.5
-  - katip-0.8.5.0
+  - katip-0.8.7.2
 
   - ext/cardano-base.git/base-deriving-via
   - ext/cardano-base.git/binary
   - ext/cardano-base.git/binary/test
   - ext/cardano-base.git/cardano-crypto-class
   - ext/cardano-base.git/cardano-crypto-praos
-  - ext/cardano-base.git/measures
-  - ext/cardano-base.git/orphans-deriving-via
+  - ext/cardano-base.git/cardano-crypto-tests
   - ext/cardano-base.git/slotting
   - ext/cardano-base.git/strict-containers
+  - ext/cardano-base.git/heapwords
+  - ext/cardano-base.git/measures
+  - ext/cardano-base.git/orphans-deriving-via
 
   - ext/cardano-crypto.git
   - ext/Win32-network.git
 
-  - ext/plutus.git/freer-extras
   - ext/plutus.git/plutus-core
-  - ext/plutus.git/plutus-ledger
   - ext/plutus.git/plutus-ledger-api
   - ext/plutus.git/plutus-tx
   - ext/plutus.git/plutus-tx-plugin
   - ext/plutus.git/prettyprinter-configurable
   - ext/plutus.git/stubs/plutus-ghc-stub
-  - ext/plutus.git/word-array
 
     # extra deps
-  - Unique-0.4.7.8@sha256:9661f45aa31dde119a2114566166ea38b011a45653337045ee4ced75636533c0,2067
+  - aeson-2.1.0.0@sha256:127f381d97f397c7c56bc5b99d0b5e4c9926be0bcfd8df67115f17392b13e17a,5960
+  - async-extras-0.1.3.2@sha256:7e3f60411e872fddc0670ca307b5d7c5dcb64cf4c01508bad44a0c5a55af21d5,1228
+  - async-timer-0.2.0.0@sha256:e1504aa0fb5932cb07498ec548180aba9e03a3e7f5d2c810bf3dce75fbdd34d6,2048
+  - attoparsec-0.13.2.5@sha256:1b64fc08464d9dc73d80e13aea362410f3c8bca5abfa6831df8821281c3cdfeb,6199
+  - canonical-json-0.6.0.0@sha256:9021f435ccb884a3b4c55bcc6b50eb19d5fc3cc3f29d5fcbdef016f5bbae23a2,3488
   - composition-prelude-3.0.0.2@sha256:1ffed216bd28d810fce0b5be83a661e2a892696d73b3f8de5c0f5edb9b5f0090,1216
-  - lazy-search-0.1.2.1@sha256:c942a01e4a64881f89c72eaef5e3a78eba8750759cd66996c6746a2a7cabe703,1199
-  - monoidal-containers-0.6.0.1@sha256:f56ea8fe91ff93da140e38b8dab4b94437b901818c13ba72fc7fc802290323ee,2583
-  - moo-1.2@sha256:0c4be1a01548db785dcbbe6b8c98579dbf03c5b3b536e0420dce3ba6a61337cb,5951
-  - size-based-0.1.2.0@sha256:1b33da89d270189661dbbda49a88b0c21d2fc2f7a407e7a2b1933e2faf0f5d4d,1258
-  - gray-code-0.3.1@sha256:2c8a4ed9c9ee37320305610604d6d93504e0813d7c9768949af418b53043185a,2388
+  - cryptonite-0.27@sha256:c3a9c8ce11e654a9d5bee827b089d4b50587272828d0c52a85362a58667a916c,18163
+  - dns-3.0.4@sha256:b9c99f4268c9a8df0060cc33c62442fefeed03f3f5ce5387b884a7906a764a96,3335
   - dom-lt-0.2.3@sha256:89f17bbeb0d23f5a46fe7099b81cc9b4b5df32aadb5080fc171c874aafc802c0,1850
+  - ekg-0.4.0.15@sha256:d6e48859a89fbbe23496f871581e44a41f97dac627c2b9db81f49b92fa066516,2031
+  - formatting-6.3.7@sha256:610199e835d93eb5902d88cf684fd938a94eda6e075353b6f8558d5ecb396855,1806
+  - generically-0.1@sha256:16d54a08bcdf708395c2200a28ffcba55e90479dc96ed617dbb94f0411f7a7af,1024
+  - gray-code-0.3.1@sha256:2c8a4ed9c9ee37320305610604d6d93504e0813d7c9768949af418b53043185a,2388
+  - hedgehog-1.1.1
+  - io-streams-haproxy-1.0.1.0@sha256:fd6c585c46679752509df185c9d8f948d1ee03625005742ab5de3ebaa882690a,3084
+  - lazy-search-0.1.2.1@sha256:c942a01e4a64881f89c72eaef5e3a78eba8750759cd66996c6746a2a7cabe703,1199
+  - monoidal-containers-0.6.2.0@sha256:124941d70df5e2928b4c6db605a1d0464e68c2c6b02e426db24a40194d43821d,2219
+  - moo-1.2@sha256:0c4be1a01548db785dcbbe6b8c98579dbf03c5b3b536e0420dce3ba6a61337cb,5951
+  - nothunks-0.1.3@sha256:33bb3af223163535fa59d1fa83ba95a355106ba3fcffe5452d4abbf13ab4608d,2521
+  - partial-order-0.2.0.0@sha256:a0d6ddc9ebcfa965a5cbcff1d06d46a79d44ea5a0335c583c2a51bcb41334487,2275
+  - ral-0.1@sha256:846216dc676f8857236de6588d136eeda33f6f49f40a8d1c31d73f59d9f77928,3264
+  - size-based-0.1.2.0@sha256:1b33da89d270189661dbbda49a88b0c21d2fc2f7a407e7a2b1933e2faf0f5d4d,1258
+  - snap-server-1.1.2.0@sha256:3167b836a0b0ee49c8d6c973535c33f583c9ef9ba62d9723f08509b38368cb8f,14641
+  - some-1.0.4@sha256:0946648ea3e1bc0513f4d9cc997fd30d24659d397862d866663c0a0f5a109843,2381
+  - statistics-linreg-0.3@sha256:95c6efe6c7f6b26bc6e9ada90ab2d18216371cf59a6ef2b517b4a6fd35d9a76f,2544
+  - streaming-binary-0.2.2.0@sha256:09b9a9b0291199c5808e88dcf9c93e7b336e740c71efeafd7c835b59794a8c90,1034
+  - tasty-hedgehog-1.2.0.0
+  - transformers-except-0.1.2@sha256:2ff895fd65ec9e45cbe839ef5b66e26b7d9f3fe561148993293a41e14491e625,1548
+  - typerep-map-0.5.0.0@sha256:34f1ba9b268a6d52e26ae460011a5571e8099b50a3f4a7c8db25dd8efe3be8ee,4667
+  - Unique-0.4.7.9@sha256:a7e154cf6d05169777a1e54aadab24fb3a6eae3ee167e5e77d7ba96d182436c7,2064
+  - validation-selective-0.1.0.1@sha256:9a5aa8b801efc6a4ffb120e1b28e80c5f7d090043be56bba11222cd20c393044,3621
+  - websockets-snap-0.10.3.1@sha256:89582b7db916e67b6c8192f489e4eafe7488d9f813e349836a2e74fa4388623d,991
+  - compact-map-2008.11.9
 
   - git: https://github.com/input-output-hk/goblins
     commit: cde90a2b27f79187ca8310b6549331e59595e7ba
@@ -123,25 +171,36 @@ extra-deps:
   - git: https://github.com/input-output-hk/flat
     commit: ee59880f47ab835dbd73bea0847dab7869fc20d8
   - git: https://github.com/input-output-hk/hedgehog-extras
-    commit: edf6945007177a638fbeb8802397f3a6f4e47c14
+    commit: 714ee03a5a786a05fc57ac5d2f1c2edce4660d85
   - git: https://github.com/input-output-hk/ekg-forward
-    commit: d9e8fd302fa6ba41c07183d371e6777286d37bc2
+    commit: 297cd9db5074339a2fb2e5ae7d0780debb670c63
+  - git: https://github.com/vshabanov/ekg-json
+    commit: 00ebe7211c981686e65730b7144fbf5350462608
+  - git: https://github.com/denisshevchenko/threepenny-gui
+    commit: 4ec92ded05ccf59ba4a874be4b404ac1b6d666b6
+  - git: https://github.com/haskell-works/hw-aeson
+    commit: 6dc309ff4260c71d9a18c220cbae8aa1dfe2a02e
 
 allow-newer: true
+
+  #test: false
+  #bench: false
 
 flags:
   cardano-crypto-praos:
     external-libsodium-vrf: true
+  cryptonite:
+    support_rdrand: false
 
 ghc-options:
   '$everything': -haddock
 
 # also set environment variable:
-# export PKG_CONFIG_PATH=$(pwd)/ext/input-output-hk_libsodium.git/OUT/lib/pkgconfig:$PKG_CONFIG_PATH
+# export PKG_CONFIG_PATH=$(pwd)/ext/OUT/lib/pkgconfig:$PKG_CONFIG_PATH
 extra-include-dirs:
-  - ext/input-output-hk_libsodium.git/OUT/include
+  - ext/OUT/include
 extra-lib-dirs:
-  - ext/input-output-hk_libsodium.git/OUT/lib
+  - ext/OUT/lib
 
 # use Nix for dependencies: can be turned on with (enable: true)
 nix:

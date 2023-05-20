@@ -20,27 +20,27 @@ _`$`_ `git submodule update`
 ### 2 build dependencies
 
 ```sh
-cd ext/input-output-hk_libsodium.git
+cd ext
 mkdir -p OUT
+cd input-output-hk_libsodium.git
 ./autogen.sh 
-./configure --prefix=$(pwd)/OUT
+./configure --prefix=$(pwd)/../OUT
 make -j 8
 make check
 make install
 
+cd secp256k1.git
+./autogen.sh 
+./configure --enable-module-schnorrsig --enable-experimental --prefix=$(pwd)/../OUT
+make; make check; make install
 ```
 
-set the variable PKG_CONFIG_PATH to point to the locally build _libsodium_ so that it will be found when linking the Haskell node.
+set the variable PKG_CONFIG_PATH to point to the locally built _libsodium_ and _libsecp256k1_ so that they will be found when linking the Haskell node.
 
 ```sh
-export PKG_CONFIG_PATH=$(pwd)/ext/input-output-hk_libsodium.git/OUT/lib/pkgconfig:$PKG_CONFIG_PATH
+export PKG_CONFIG_PATH=$(pwd)/ext/OUT/lib/pkgconfig:$PKG_CONFIG_PATH
 ```
 
-And, set the path to the newly built _libsodium_ libraries for the linker:
-
-```sh
-export LD_LIBRARY_PATH=$(pwd)/ext/input-output-hk_libsodium.git/OUT/lib:$LD_LIBRARY_PATH
-```
 
 ### 3 build
 

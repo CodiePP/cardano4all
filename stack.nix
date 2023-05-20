@@ -6,20 +6,20 @@ haskell.lib.buildStackProject {
       automake
       autoconf
       pkg-config
-      gcc
+      #gcc
       libtool
       cabal-install
       #haskell.compiler.ghc8104
       ghc
-      ccls
-      vscode
+      #ccls
+      #vscode
 
       #ormolu
       #haskell-language-server
 
       zlib
-      systemd
-      rdkafka
+      #systemd
+      #rdkafka
     ];
     shellHook = ''
       echo 'Haskel Stack nixified environment'

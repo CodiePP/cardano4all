@@ -50,3 +50,15 @@
 [submodule "ext/cardano-config.git"]
 	path = ext/cardano-config.git
 	url = https://github.com/input-output-hk/cardano-config
+[submodule "ext/io-sim.git"]
+	path = ext/io-sim.git
+	url = https://github.com/input-output-hk/io-sim
+[submodule "ext/typed-protocols.git"]
+	path = ext/typed-protocols.git
+	url = https://github.com/input-output-hk/typed-protocols
+[submodule "ext/secp256k1.git"]
+	path = ext/secp256k1.git
+	url = https://github.com/bitcoin-core/secp256k1
+[submodule "ext/ouroboros-consensus.git"]
+	path = ext/ouroboros-consensus.git
+	url = https://github.com/input-output-hk/ouroboros-consensus.git
